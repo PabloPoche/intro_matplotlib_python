@@ -37,13 +37,23 @@ if __name__ == '__main__':
 
     # Alumno: Realizar un gráfico que representen las dos funciones
     # Para ello se debe llamar dos veces a "plot" con el mismo "ax"
+    fig = plt.figure()
+    fig.suptitle("Line plot polinomicas", fontsize=16)
+    ax = fig.add_subplot()
 
     # Se debe colocar en la leyenda la función que representa
     # cada función
-
     # Cada función dibujarla con un color distinto
     # a su elección
-
+    ax.plot(x, y1, color='b', marker='.', label="y=x^2")
+    ax.plot(x, y2, color='r', marker='+', label="y=x^3")
+ 
+    ax.set_facecolor('whitesmoke')
+    ax.legend()
+    ax.grid()
+    ax.set_ylabel("Y")
+    ax.set_xlabel("X")
+  
     # Crear acá su gráfico
-
+    plt.show()
     print("terminamos")
